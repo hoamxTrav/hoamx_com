@@ -1,4 +1,4 @@
-/* HOA-MX Minimal Theme  |  v3.1  |  Travis Mitchell  */
+/* HOA-MX Minimal Theme  |  v3.1  */
 
 /* ---------- Base Variables ---------- */
 :root {
@@ -9,14 +9,10 @@
   --terracotta: #C1502E;
 }
 
-/* ---------- Global Reset ---------- */
+/* ---------- Reset ---------- */
 *,
 *::before,
-*::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+*::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 html, body {
   height: 100%;
@@ -28,22 +24,16 @@ html, body {
 }
 
 /* ---------- Layout ---------- */
-.container {
-  width: 100%;
-  max-width: 1080px;
-  margin: 0 auto;
-  padding: 1rem;
-}
+.container { width: 100%; max-width: 1080px; margin: 0 auto; padding: 1rem; }
 
 /* ---------- Header & Footer ---------- */
 header {
   background: var(--terracotta);
   color: var(--soft-white);
   padding: 1rem 0;
-  text-align: center;
+  text-align: left;
   font-weight: 600;
 }
-
 footer {
   background: var(--cement-gray);
   color: var(--matte-black);
@@ -53,23 +43,13 @@ footer {
 }
 
 /* ---------- Typography ---------- */
-h1, h2, h3 {
-  font-weight: 600;
-  margin-bottom: 0.5rem;
-}
-
-p {
-  margin-bottom: 1rem;
-}
+h1, h2, h3 { font-weight: 600; margin-bottom: 0.5rem; }
+p { margin-bottom: 1rem; }
+.sr { position:absolute; left:-9999px; }
 
 /* ---------- Links & Buttons ---------- */
-a {
-  color: var(--natural-oak);
-  text-decoration: none;
-}
-a:hover {
-  text-decoration: underline;
-}
+a { color: var(--natural-oak); text-decoration: none; }
+a:hover { text-decoration: underline; }
 
 button, .btn {
   background: var(--terracotta);
@@ -81,9 +61,7 @@ button, .btn {
   font-weight: 500;
   transition: background 0.2s ease-in-out;
 }
-button:hover, .btn:hover {
-  background: var(--natural-oak);
-}
+button:hover, .btn:hover { background: var(--natural-oak); }
 
 /* ---------- Forms ---------- */
 input, select, textarea {
@@ -99,7 +77,7 @@ input:focus, select:focus, textarea:focus {
   outline: 2px solid var(--natural-oak);
 }
 
-/* ---------- Utility ---------- */
+/* ---------- Utilities ---------- */
 .text-center { text-align: center; }
 .mt-2 { margin-top: 0.5rem; }
 .mt-4 { margin-top: 1rem; }
@@ -107,10 +85,6 @@ input:focus, select:focus, textarea:focus {
 
 /* ---------- Responsive ---------- */
 @media (max-width: 640px) {
-  header, footer {
-    padding: 0.75rem;
-  }
-  button, .btn {
-    width: 100%;
-  }
+  header, footer { padding: 0.75rem; }
+  button, .btn { width: 100%; }
 }
