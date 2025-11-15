@@ -31,34 +31,29 @@
     <section>
         <h3>Start Your Free Trial</h3>
         <p>Set up your HOA and explore all features today!</p>
-        <form id='trial-form'>
-            <div class='form-group'>
-                <label>First Name *</label>
-                <input type='text' name='firstName' required>
-            </div>
-            <div class='form-group'>
-                <label>Email *</label>
-                <input type='email' name='email' required>
-            </div>
-            <div class='form-group'>
-                <label>Homeowners Association Name *</label>
-                <input type='text' name='hoaName' required>
-            </div>
-            <div class='form-group'>
-                <label>Position on Board *</label>
-                <select name='position' required>
-                    <option value=''>Select Position</option>
-                    <option>President</option>
-                    <option>Vice President</option>
-                    <option>Treasurer</option>
-                    <option>Secretary</option>
-                    <option>Member at Large</option>
-                    <option>Not on the Board</option>
-                </select>
-            </div>
-            <input type='hidden' name='ip' id='ip-field'>
-            <button type='submit'>Start Your Free Trial</button>
-        </form>
+        <form id="trialForm">
+  <!-- fields ... -->
+  <button type="submit">Request Demo</button>
+</form>
+<script>
+document.getElementById('trialForm').addEventListener('submit', async (e)=>{
+  e.preventDefault();
+  const body = {
+    firstName: e.target.firstName?.value,
+    email: e.target.email?.value,
+    hoaName: e.target.hoaName?.value,
+    boardRole: e.target.boardRole?.value,
+    source: "StaticWeb"
+  };
+  const res = await fetch('/api/submitTrial', {
+    method:'POST',
+    headers:{'Content-Type':'application/json'/*, 'x-functions-key':'<if function auth>'*/},
+    body: JSON.stringify(body)
+  });
+  alert(res.ok ? "Thanks! We’ll be in touch." : "Error submitting.");
+});
+</script>
+
         <div id='thank-you'>Thank you! You will get a response soon.</div>
     </section>
 
