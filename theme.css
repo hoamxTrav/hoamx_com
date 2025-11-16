@@ -1,16 +1,15 @@
-/* HOA-MX Theme v3.1 — polished minimal */
+/* HOA-MX Theme v3.1 — palette-locked, minimal */
 
-/* ----- Brand Vars ----- */
+/* ----- Brand palette (exact) ----- */
 :root{
-  --soft-white:#F5F2EC;
-  --cement-gray:#B6B3AA;
-  --natural-oak:#C89F63;
-  --matte-black:#1C1C1B;
-  --terracotta:#C1502E;
+  --soft-white:#F5F2EC;   /* base backgrounds */
+  --cement-gray:#B6B3AA;  /* dividers / neutrals */
+  --natural-oak:#C89F63;  /* subtle accents / links */
+  --matte-black:#1C1C1B;  /* primary text */
+  --terracotta:#C1502E;   /* primary brand / CTAs */
 
-  --radius-lg:18px;
+  --radius-lg:16px;
   --radius-sm:8px;
-
   --container:1080px;
 }
 
@@ -26,85 +25,65 @@ body{
   -webkit-font-smoothing:antialiased;
 }
 img{max-width:100%;display:block}
+a{color:var(--natural-oak);text-decoration:none}
+a:hover{text-decoration:underline}
 
 /* ----- Layout ----- */
 .container{max-width:var(--container);margin-inline:auto;padding:16px}
-.section{padding:56px 0}
+main{padding-block:24px}
+
+/* ----- Header / Footer (brand-correct) ----- */
+.site-header{background:var(--terracotta);color:var(--soft-white)}
+.header-inner{display:flex;align-items:center;justify-content:space-between}
+.brand{display:flex;align-items:center;gap:10px}
+.logo{height:36px}
+.wordmark{font-weight:700;letter-spacing:.3px}
+
+.site-footer{background:var(--cement-gray);color:var(--matte-black);padding:16px 0;text-align:center}
+
+/* ----- Hero (no creative gradients; simple, on-brand) ----- */
+.hero{padding:40px 0;background:var(--soft-white)}
+.hero h1{font-size:clamp(28px,4vw,44px);line-height:1.2;margin:0 0 8px}
+.lede{margin:0;max-width:720px}
+
+/* ----- Cards / Sections ----- */
+.section{padding:32px 0}
 .card{
   background:#fff;border:1px solid var(--cement-gray);
-  border-radius:var(--radius-lg); padding:24px;
-  box-shadow:0 4px 20px rgba(0,0,0,.05);
+  border-radius:var(--radius-lg);padding:20px;
 }
 
-/* ----- Header ----- */
-.site-header{
-  background:var(--terracotta); color:var(--soft-white);
-}
-.header-inner{display:flex; align-items:center; justify-content:space-between}
-.brand{display:flex; align-items:center; gap:10px}
-.logo{height:36px; width:auto}
-.wordmark{font-weight:700; letter-spacing:.5px}
-
-/* ----- Hero ----- */
-.hero{
-  background:linear-gradient(180deg, var(--soft-white), #fff);
-  padding:56px 0 40px;
-}
-.hero h1{
-  font-size:clamp(28px,4vw,44px);
-  line-height:1.2; margin:0 0 10px 0;
-}
-.lede{font-size:18px; max-width:720px}
-.cta-row{margin-top:18px; display:flex; gap:12px}
-
-/* ----- Typography ----- */
-h2.section-title{font-size:28px;margin:0 0 4px 0}
-.section-subtitle{margin:0 0 18px 0; color:#333}
-
-/* ----- Buttons & Links ----- */
-a{color:var(--natural-oak); text-decoration:none}
-a:hover{text-decoration:underline}
-
+/* ----- Buttons (Terracotta only; hover = darker same hue) ----- */
 .btn{
-  display:inline-block;
-  padding:10px 16px; border-radius:var(--radius-sm);
-  background:var(--terracotta); color:var(--soft-white);
-  font-weight:600; border:0; cursor:pointer;
-  transition:transform .08s ease, background .2s ease;
-  text-decoration:none;
+  display:inline-block;border:0;border-radius:var(--radius-sm);
+  padding:10px 16px;background:var(--terracotta);color:var(--soft-white);
+  font-weight:600;cursor:pointer;transition:filter .15s ease;
 }
-.btn:hover{background:var(--natural-oak)}
-.btn:active{transform:translateY(1px)}
+.btn:hover{filter:brightness(.92)}
+.btn:active{filter:brightness(.86)}
 .btn-ghost{
-  background:transparent; color:var(--soft-white);
-  border:1px solid rgba(255,255,255,.6);
+  background:transparent;color:var(--soft-white);
+  border:1px solid rgba(255,255,255,.7);
 }
-.btn-ghost:hover{background:rgba(255,255,255,.12)}
 
 /* ----- Form ----- */
-.form-grid{
-  display:grid;
-  grid-template-columns:repeat(2,minmax(0,1fr));
-  gap:16px;
-}
-.field{display:flex; flex-direction:column; gap:6px}
-label{font-size:14px; font-weight:600}
+.grid{display:grid;gap:16px}
+.form-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+.field{display:flex;flex-direction:column;gap:6px}
+label{font-size:14px;font-weight:600}
 input,select,textarea{
-  font-size:16px; padding:10px 12px; border-radius:8px;
-  border:1px solid var(--cement-gray); background:#fff;
+  font-size:16px;padding:10px 12px;border-radius:8px;
+  border:1px solid var(--cement-gray);background:#fff;color:var(--matte-black);
 }
 input:focus,select:focus,textarea:focus{
-  outline:2px solid var(--natural-oak);
-  border-color:var(--natural-oak);
+  outline:2px solid var(--natural-oak);border-color:var(--natural-oak);
 }
-.actions{grid-column:1 / -1; display:flex; align-items:center; gap:12px}
-.form-msg{min-height:1.25rem; font-size:14px}
+.actions{grid-column:1 / -1;display:flex;align-items:center;gap:12px}
+.form-msg{min-height:1.25rem;font-size:14px}
 
-/* ----- Footer ----- */
-.site-footer{
-  background:var(--cement-gray); color:var(--matte-black);
-  padding:16px 0; text-align:center;
-}
+/* ----- Titles ----- */
+.section-title{font-size:28px;margin:0 0 4px}
+.section-subtitle{margin:0 0 16px}
 
 /* ----- Responsive ----- */
 @media (max-width:720px){
