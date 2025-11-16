@@ -2,59 +2,78 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-
   <title>HOA-MX — Homeowner Associations Modern Experience</title>
-  <meta name="description" content="HOA-MX simplifies and unifies HOA management with modern tools and clear communication.">
+  <meta name="description" content="Collect payments, send letters, manage vendors, and keep everyone in the loop.">
   <meta name="theme-color" content="#1C1C1B">
-  <meta name="color-scheme" content="light">
-
-  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
-  <link rel="preload" href="/theme.css" as="style">
-  <link rel="stylesheet" href="/theme.css">
+  <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+  <link rel="stylesheet" href="theme.css">
 </head>
 <body>
-  <header>
-    <div class="container">
-      <img src="/images/logo.png" alt="HOA-MX" style="height:40px; vertical-align:middle; margin-right:10px;">
-      <span>HOA-MX</span>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <img class="logo" src="images/logo.png" alt="HOA-MX logo">
+        <span class="wordmark">HOA-MX</span>
+      </div>
+      <nav class="nav">
+        <a href="#demo" class="btn btn-ghost">Request a demo</a>
+      </nav>
     </div>
   </header>
 
-  <main class="container" style="padding-top:1.25rem; padding-bottom:2rem;">
-    <section style="margin-bottom:2rem;">
-      <h1>Modern HOA management, without the noise.</h1>
-      <p>Collect payments, send letters, manage vendors, and keep everyone in the loop. Built for real boards and real neighbors.</p>
-      <a class="btn mt-2" href="#demo">Request a demo</a>
+  <main>
+    <section class="hero">
+      <div class="container">
+        <h1>Modern HOA management, without the noise.</h1>
+        <p class="lede">
+          Collect payments, send letters, manage vendors, and keep everyone in the loop.
+          Built for real boards and real neighbors.
+        </p>
+        <div class="cta-row">
+          <a class="btn" href="#demo">Request a demo</a>
+        </div>
+      </div>
     </section>
 
-    <section id="demo" style="margin-top:2rem; max-width:640px;">
-      <h2 class="mt-4">Request a Demo</h2>
-      <p>Tell us where to reach you and we’ll follow up.</p>
+    <section id="demo" class="section">
+      <div class="container card">
+        <h2 class="section-title">Request a Demo</h2>
+        <p class="section-subtitle">Tell us where to reach you and we’ll follow up.</p>
 
-      <form id="trialForm" novalidate>
-        <label class="sr">First Name</label>
-        <input name="firstName" id="firstName" placeholder="First name">
+        <form id="trialForm" class="grid form-grid" novalidate>
+          <div class="field">
+            <label for="firstName">First Name</label>
+            <input id="firstName" name="firstName" placeholder="First name">
+          </div>
 
-        <label class="sr">Email</label>
-        <input name="email" id="email" type="email" placeholder="name@example.com" required>
+          <div class="field">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" placeholder="name@example.com" required>
+          </div>
 
-        <label class="sr">HOA / Association Name</label>
-        <input name="hoaName" id="hoaName" placeholder="e.g., Rice Lake Terrace">
+          <div class="field">
+            <label for="hoaName">HOA / Association Name</label>
+            <input id="hoaName" name="hoaName" placeholder="e.g., Rice Lake Terrace">
+          </div>
 
-        <label class="sr">Board Role</label>
-        <input name="boardRole" id="boardRole" placeholder="President, Treasurer, etc.">
+          <div class="field">
+            <label for="boardRole">Board Role</label>
+            <input id="boardRole" name="boardRole" placeholder="President, Treasurer, etc.">
+          </div>
 
-        <button type="submit" class="mt-2">Request Demo</button>
-        <p id="formMsg" class="mt-2" style="min-height:1.25rem;"></p>
-      </form>
+          <div class="actions">
+            <button type="submit" class="btn">Request Demo</button>
+            <p id="formMsg" class="form-msg" aria-live="polite"></p>
+          </div>
+        </form>
+      </div>
     </section>
   </main>
 
-  <footer>
+  <footer class="site-footer">
     <div class="container">
-      <small>&copy; <span id="y"></span> HOA-MX. All rights reserved.</small>
+      <small>© <span id="y"></span> HOA-MX. All rights reserved.</small>
     </div>
   </footer>
 
@@ -94,9 +113,9 @@
           f.reset();
         } else {
           const txt = await res.text();
-          m.textContent = 'Error submitting: ' + (txt || res.status);
+          m.textContent = 'Error: ' + (txt || res.status);
         }
-      } catch (err) {
+      } catch {
         m.textContent = 'Network error. Please try again.';
       }
     });
