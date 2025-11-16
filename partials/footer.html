@@ -1,6 +1,18 @@
 <footer class="site-footer">
-  <div>© <span id="year"></span> Trust Digital LLC · All rights reserved.</div>
+  <div class="container footer-inner">
+    <div class="footer-left">
+      <div class="footer-brand">HOA-MX</div>
+      <div>Human-centered HOA automation</div>
+    </div>
+    <div class="footer-right">
+      © <span id="footer-year"></span> Trust Digital LLC · All rights reserved.
+    </div>
+  </div>
+  <script>
+    // This runs inside footer.html when it's injected
+    (function () {
+      var el = document.getElementById("footer-year");
+      if (el) el.textContent = new Date().getFullYear();
+    })();
+  </script>
 </footer>
-<script>
-  document.getElementById('year').textContent = new Date().getFullYear();
-</script>
