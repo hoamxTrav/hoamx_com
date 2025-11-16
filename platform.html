@@ -1,110 +1,338 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>HOA-MX</title>
-  <meta name="description" content="Modern HOA management for real boards and real neighbors.">
-  <meta name="theme-color" content="#1C1C1B">
-  <link rel="icon" type="image/x-icon" href="images/favicon.ico">
-  <link rel="stylesheet" href="theme.css">
-</head>
-<body>
-  <header class="site-header">
-    <div class="container header-inner">
-      <div class="brand">
-        <img class="logo" src="images/logo.png" alt="HOA-MX logo">
-        <span class="wordmark">HOA-MX</span>
-      </div>
-      <nav class="nav">
-        <a href="#demo" class="btn-ghost btn">Request a demo</a>
-      </nav>
-    </div>
-  </header>
+  <head>
+    <meta charset="utf-8" />
+    <title>HOA-MX Platform</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="stylesheet" href="/assets/site.css" />
+  </head>
+  <body>
+    <!-- Header include -->
+    <div data-include="/partials/header.html"></div>
 
-  <main>
-    <section class="hero">
-      <div class="container">
-        <h1>Modern HOA management, without the noise.</h1>
-        <p class="lede">
-          Collect payments, send letters, manage vendors, and keep everyone in the loop. Built for real boards and real neighbors.
+    <main class="container">
+      <!-- PAGE HERO / INTRO -->
+      <section class="section">
+        <h1>HOA-MX Platform</h1>
+        <p class="section-lead">
+          HOA-MX is an operations platform for homeowner associations. It combines
+          core software modules, annual professional services, and an operational
+          layer that tracks trees, snow, grounds, rentals, and risk in one place.
         </p>
-        <div style="margin-top:16px">
-          <a class="btn" href="#demo">Request a demo</a>
+
+        <div class="columns-3">
+          <div class="info-block">
+            <h3>Core Modules</h3>
+            <p>
+              Billing, maintenance, Telegram communications, governance, vault, directory,
+              and reporting built to support day-to-day work.
+            </p>
+          </div>
+          <div class="info-block">
+            <h3>Professional Services</h3>
+            <p>
+              Accounting, legal, insurance, vendor oversight, tax, and training services
+              that wrap around the software when boards need extra help.
+            </p>
+          </div>
+          <div class="info-block">
+            <h3>Operational Layer</h3>
+            <p>
+              Tools for trees, grounds, snow, landscaping, ARC, rentals, and restricted
+              devices so the board can see the full picture of the community.
+            </p>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section id="demo" class="section">
-      <div class="container card">
-        <h2 class="section-title">Request a Demo</h2>
-        <p class="section-subtitle">Tell us where to reach you and we’ll follow up.</p>
-
-        <form id="trialForm" class="grid form-grid" novalidate>
-          <div class="field">
-            <label for="firstName">First Name</label>
-            <input id="firstName" name="firstName" placeholder="First name">
+      <!-- QUICK JUMP NAV -->
+      <section class="section section-muted">
+        <h2>Explore the platform</h2>
+        <div class="columns-3">
+          <div class="info-block">
+            <h3><a href="#core-modules">Core modules</a></h3>
+            <p>What you log into every day to run the association.</p>
           </div>
-
-          <div class="field">
-            <label for="email">Email</label>
-            <input id="email" name="email" type="email" placeholder="name@example.com" required>
+          <div class="info-block">
+            <h3><a href="#pro-services">Professional services</a></h3>
+            <p>Annual services that keep finances and compliance on track.</p>
           </div>
-
-          <div class="field">
-            <label for="hoaName">HOA / Association Name</label>
-            <input id="hoaName" name="hoaName" placeholder="e.g., Rice Lake Terrace">
+          <div class="info-block">
+            <h3><a href="#operational-layer">Operational layer</a></h3>
+            <p>Real-world operations: trees, snow, grounds, rentals, and risk.</p>
           </div>
+        </div>
+      </section>
 
-          <div class="field">
-            <label for="boardRole">Board Role</label>
-            <input id="boardRole" name="boardRole" placeholder="President, Treasurer, etc.">
-          </div>
+      <!-- CORE MODULES -->
+      <section class="section" id="core-modules">
+        <h2>Core Modules</h2>
+        <p class="section-lead">
+          These are the core HOA-MX tools available to every association: the digital
+          office that keeps billing, maintenance, communication, and governance organized.
+        </p>
 
-          <div class="actions">
-            <button type="submit" class="btn">Request Demo</button>
-            <p id="formMsg" class="form-msg" aria-live="polite"></p>
-          </div>
-        </form>
-      </div>
-    </section>
-  </main>
+        <div class="cards-grid">
+          <article class="card" id="billing">
+            <h3>Billing &amp; Payments</h3>
+            <p>
+              Collect dues, special assessments, and fines via ACH, debit, or mailed
+              checks. Every unit has a clear, searchable payment history and automatic
+              ledger updates.
+            </p>
+            <p>
+              Optional late-fee rules respect Minnesota limits on fines and notice
+              requirements.
+            </p>
+          </article>
 
-  <footer class="site-footer">
-    <div class="container">
-      <small>© <span id="y"></span> HOA-MX. All rights reserved.</small>
-    </div>
-  </footer>
+          <article class="card" id="maintenance">
+            <h3>Maintenance &amp; Work Orders</h3>
+            <p>
+              Residents can submit requests by web, phone, or mail. Board members or
+              managers assign vendors, attach photos and estimates, and track completion
+              notes.
+            </p>
+            <p>
+              Residents see status updates and can provide satisfaction feedback when
+              work is completed.
+            </p>
+          </article>
 
-  <script>
-    document.getElementById('y').textContent = new Date().getFullYear();
-    fetch('/api/logvisit', { method:'POST' }).catch(()=>{});
+          <article class="card" id="telegram">
+            <h3>Communications “Telegram”</h3>
+            <p>
+              Telegram centralizes all inbound and outbound communication—letters, email,
+              voicemail, and meetings—into a single, searchable record.
+            </p>
+            <p>
+              Supported formats include PDF (letters), MP3 (voicemail), HTML (email),
+              MP4 (video), and TXT (transcripts).
+            </p>
+          </article>
 
-    const f = document.getElementById('trialForm');
-    const m = document.getElementById('formMsg');
+          <article class="card" id="governance">
+            <h3>Board Governance</h3>
+            <p>
+              Track motions, digital votes, and meetings in one place. Agenda templates
+              and optional e-signatures help boards standardize their process.
+            </p>
+            <p>
+              Meets new Minnesota “meet and confer” and notice expectations so decisions
+              are documented and defensible.
+            </p>
+          </article>
 
-    f.addEventListener('submit', async (e) => {
-      e.preventDefault();
-      m.textContent = '';
-      const body = {
-        firstName: document.getElementById('firstName').value || null,
-        email:     document.getElementById('email').value || '',
-        hoaName:   document.getElementById('hoaName').value || null,
-        boardRole: document.getElementById('boardRole').value || null,
-        source: 'StaticWeb'
-      };
-      if (!body.email) { m.textContent = 'Please enter a valid email.'; return; }
+          <article class="card" id="vault">
+            <h3>Document Vault</h3>
+            <p>
+              Store and categorize bylaws, insurance policies, budgets, and key notices.
+              The vault provides a simple, permanent archive that supports board
+              continuity and transparency.
+            </p>
+          </article>
 
-      try {
-        const res = await fetch('/api/submitTrial', {
-          method:'POST',
-          headers:{ 'Content-Type':'application/json' },
-          body: JSON.stringify(body)
-        });
-        if (res.ok) { m.textContent = 'Thanks! We’ll be in touch shortly.'; f.reset(); }
-        else { m.textContent = 'Error: ' + (await res.text() || res.status); }
-      } catch { m.textContent = 'Network error. Please try again.'; }
-    });
-  </script>
-</body>
+          <article class="card" id="directory">
+            <h3>Directory &amp; Contact Center</h3>
+            <p>
+              A unified directory for residents, board members, and vendors, with phone
+              routing and voicemail transcription.
+            </p>
+            <p>
+              Optional “call center” mode adds recording and dictation storage for HOAs
+              that want a live operator.
+            </p>
+          </article>
+
+          <article class="card" id="reports">
+            <h3>Reports &amp; Audits</h3>
+            <p>
+              Generate summaries of payments, violations, and maintenance spend to
+              support annual meetings and audits.
+            </p>
+            <p>
+              Reporting is designed to help boards comply with document and
+              record-keeping obligations in Minnesota CIC law.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <!-- PROFESSIONAL SERVICES -->
+      <section class="section" id="pro-services">
+        <h2>Annual Professional Services</h2>
+        <p class="section-lead">
+          When boards want more than software, HOA-MX can connect them to professional
+          services that plug directly into the platform: accounting, legal, insurance,
+          vendor oversight, tax, and training.
+        </p>
+
+        <div class="cards-grid">
+          <article class="card">
+            <h3>Accounting &amp; Treasury Administration</h3>
+            <p>
+              Budget preparation, reserve planning, monthly bank reconciliation, expense
+              categorization, year-end reporting, and vendor 1099/W-9 tracking.
+            </p>
+            <p>
+              Escrow and operating accounts can be managed with dual-signature controls.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>Legal &amp; Compliance Support</h3>
+            <p>
+              Annual review of governing documents, drafting of meet-and-confer policies,
+              conflict-of-interest disclosures, and vendor contract templates that
+              reflect Minnesota HOA law.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>Insurance &amp; Risk Management</h3>
+            <p>
+              Support for master policy and D&amp;O renewals, comparative quoting, and
+              coordination of certificates and claims with vendors and owners.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>Vendor Oversight &amp; Contract Administration</h3>
+            <p>
+              RFP and renewal cycles, performance documentation, inspection logs,
+              proof-of-insurance tracking, and annual W-9/COI updates.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>Recordkeeping &amp; Archival Compliance</h3>
+            <p>
+              Digital indexing of minutes, budgets, and letters; secure backups;
+              and annual audits of Telegram-style communications for completeness.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>Tax Preparation &amp; Audit Coordination</h3>
+            <p>
+              Support for IRS forms (1120-H or 1120), CPA compilation or review, and
+              coordination if a formal audit is required.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>Board Training &amp; Transition Services</h3>
+            <p>
+              Orientation on budgets, meetings, and compliance, plus officer transition
+              support and updates to the digital binder (bylaws, insurance, contacts).
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>Resident Communications &amp; Printing</h3>
+            <p>
+              Annual mailings (budget notices, meeting invites) and transcription of
+              voice or mailed content into Telegram so mixed-age communities can stay
+              in sync.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <!-- OPERATIONAL LAYER -->
+      <section class="section" id="operational-layer">
+        <h2>Operational Layer</h2>
+        <p class="section-lead">
+          Beyond software and services, HOA-MX supports the real-world operations boards
+          deal with every season: trees, grounds, snow, landscaping, architectural
+          changes, rentals, insurance responsibilities, and restricted devices.
+        </p>
+
+        <div class="cards-grid">
+          <article class="card" id="trees">
+            <h3>Tree Management</h3>
+            <p>
+              Track location, photos, health, treatments, and cost history for each
+              tree in the community. Useful for both safety and long-term budgeting.
+            </p>
+          </article>
+
+          <article class="card" id="grounds">
+            <h3>Grounds Keeping</h3>
+            <p>
+              Document mowing and trimming schedules, inspection photos, and resident
+              requests (for example, missed areas or debris cleanup).
+            </p>
+          </article>
+
+          <article class="card" id="snow">
+            <h3>Snow Removal</h3>
+            <p>
+              Record snowfall start/stop, service response times, type of response
+              (plow, shovel, salt), and vehicles that block service.
+            </p>
+          </article>
+
+          <article class="card" id="landscaping">
+            <h3>Landscaping Projects</h3>
+            <p>
+              Track home and common-area landscaping with plant types, materials,
+              before/after photos, and vendor approvals.
+            </p>
+          </article>
+
+          <article class="card" id="arc">
+            <h3>Special ARC Requests</h3>
+            <p>
+              Manage architectural change requests with homeowner responsibilities,
+              rule references, timelines, inspections, and digital acknowledgments.
+            </p>
+          </article>
+
+          <article class="card" id="rentals">
+            <h3>Rental Record Keeping</h3>
+            <p>
+              Keep leases, approvals, statuses (approved, pending, violation), and
+              associated fines organized, with links to payment and insurance records.
+            </p>
+          </article>
+
+          <article class="card" id="insurance-tracking">
+            <h3>Insurance Tracking</h3>
+            <p>
+              Map claims, costs, and deductibles across the master policy and individual
+              homeowner responsibilities, so the board can see where risk lives.
+            </p>
+          </article>
+
+          <article class="card" id="restricted-devices">
+            <h3>Restricted Device Compliance</h3>
+            <p>
+              For items like woodburning fireplaces, track signed legal acceptance,
+              proof of additional insurance, inspection intervals, and reminders.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <!-- CTA -->
+      <section class="section section-muted">
+        <h2>See HOA-MX in action</h2>
+        <p class="section-lead">
+          The platform can be tuned for self-managed boards, professional managers,
+          or hybrid models. If you’d like to see how it would look for your community,
+          we can set up a demo site with your bylaws and documents.
+        </p>
+        <div class="hero-actions">
+          <a href="/contact.html" class="btn btn-primary">Request a platform demo</a>
+          <a href="/" class="btn btn-outline">Back to home</a>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer include -->
+    <div data-include="/partials/footer.html"></div>
+
+    <script src="/assets/include.js" defer></script>
+  </body>
 </html>
