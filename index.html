@@ -1,110 +1,19 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>HOA-MX</title>
-  <meta name="description" content="Modern HOA management for real boards and real neighbors.">
-  <meta name="theme-color" content="#1C1C1B">
-  <link rel="icon" type="image/x-icon" href="images/favicon.ico">
-  <link rel="stylesheet" href="theme.css">
-</head>
-<body>
-  <header class="site-header">
-    <div class="container header-inner">
-      <div class="brand">
-        <img class="logo" src="images/logo.png" alt="HOA-MX logo">
-        <span class="wordmark">HOA-MX</span>
-      </div>
-      <nav class="nav">
-        <a href="#demo" class="btn-ghost btn">Request a demo</a>
-      </nav>
-    </div>
-  </header>
+  <head>
+    <meta charset="utf-8" />
+    <title>HOA-MX</title>
+    <link rel="stylesheet" href="/assets/site.css" />
+  </head>
+  <body>
+    <div data-include="/partials/header.html"></div>
 
-  <main>
-    <section class="hero">
-      <div class="container">
-        <h1>Modern HOA management, without the noise.</h1>
-        <p class="lede">
-          Collect payments, send letters, manage vendors, and keep everyone in the loop. Built for real boards and real neighbors.
-        </p>
-        <div style="margin-top:16px">
-          <a class="btn" href="#demo">Request a demo</a>
-        </div>
-      </div>
-    </section>
+    <main class="container">
+      <h1>Transparent. Compliant. Kind.</h1>
+      <!-- cards go here -->
+    </main>
 
-    <section id="demo" class="section">
-      <div class="container card">
-        <h2 class="section-title">Request a Demo</h2>
-        <p class="section-subtitle">Tell us where to reach you and we’ll follow up.</p>
-
-        <form id="trialForm" class="grid form-grid" novalidate>
-          <div class="field">
-            <label for="firstName">First Name</label>
-            <input id="firstName" name="firstName" placeholder="First name">
-          </div>
-
-          <div class="field">
-            <label for="email">Email</label>
-            <input id="email" name="email" type="email" placeholder="name@example.com" required>
-          </div>
-
-          <div class="field">
-            <label for="hoaName">HOA / Association Name</label>
-            <input id="hoaName" name="hoaName" placeholder="e.g., Rice Lake Terrace">
-          </div>
-
-          <div class="field">
-            <label for="boardRole">Board Role</label>
-            <input id="boardRole" name="boardRole" placeholder="President, Treasurer, etc.">
-          </div>
-
-          <div class="actions">
-            <button type="submit" class="btn">Request Demo</button>
-            <p id="formMsg" class="form-msg" aria-live="polite"></p>
-          </div>
-        </form>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="container">
-      <small>© <span id="y"></span> HOA-MX. All rights reserved.</small>
-    </div>
-  </footer>
-
-  <script>
-    document.getElementById('y').textContent = new Date().getFullYear();
-    fetch('/api/logvisit', { method:'POST' }).catch(()=>{});
-
-    const f = document.getElementById('trialForm');
-    const m = document.getElementById('formMsg');
-
-    f.addEventListener('submit', async (e) => {
-      e.preventDefault();
-      m.textContent = '';
-      const body = {
-        firstName: document.getElementById('firstName').value || null,
-        email:     document.getElementById('email').value || '',
-        hoaName:   document.getElementById('hoaName').value || null,
-        boardRole: document.getElementById('boardRole').value || null,
-        source: 'StaticWeb'
-      };
-      if (!body.email) { m.textContent = 'Please enter a valid email.'; return; }
-
-      try {
-        const res = await fetch('/api/submitTrial', {
-          method:'POST',
-          headers:{ 'Content-Type':'application/json' },
-          body: JSON.stringify(body)
-        });
-        if (res.ok) { m.textContent = 'Thanks! We’ll be in touch shortly.'; f.reset(); }
-        else { m.textContent = 'Error: ' + (await res.text() || res.status); }
-      } catch { m.textContent = 'Network error. Please try again.'; }
-    });
-  </script>
-</body>
+    <div data-include="/partials/footer.html"></div>
+    <script src="/assets/include.js" defer></script>
+  </body>
 </html>
