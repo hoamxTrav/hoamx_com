@@ -2,18 +2,36 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>HOA-MX</title>
+    <title>HOA-MX – Transparent. Compliant. Kind.</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
     <link rel="stylesheet" href="/assets/site.css" />
   </head>
   <body>
+
+    <!-- Header include -->
     <div data-include="/partials/header.html"></div>
 
     <main class="container">
-      <h1>Transparent. Compliant. Kind.</h1>
-      <!-- cards go here -->
+      <section class="hero">
+        <h1>Transparent. Compliant. Kind.</h1>
+        <p>
+          A modern platform for boards, residents, and vendors—built on
+          multi-channel communication and clear governance.
+        </p>
+        <div class="hero-actions">
+          <a href="/contact.html" class="btn btn-primary">Request a Demo</a>
+          <a href="/platform.html" class="btn btn-outline">Explore Platform</a>
+        </div>
+      </section>
+
+      <!-- Cards grid include -->
+      <section data-include="/partials/home-cards.html"></section>
     </main>
 
+    <!-- Footer include -->
     <div data-include="/partials/footer.html"></div>
-    <script src="/assets/include.js" defer></script>
+
+    <!-- include.js should be last so the DOM exists -->
+    <script src="/assets/include.js"></script>
   </body>
 </html>
