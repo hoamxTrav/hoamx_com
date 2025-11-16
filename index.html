@@ -7,31 +7,111 @@
     <link rel="stylesheet" href="/assets/site.css" />
   </head>
   <body>
-
     <!-- Header include -->
     <div data-include="/partials/header.html"></div>
 
     <main class="container">
+      <!-- HERO -->
       <section class="hero">
-        <h1>Transparent. Compliant. Kind.</h1>
-        <p>
-          A modern platform for boards, residents, and vendors—built on
-          multi-channel communication and clear governance.
-        </p>
-        <div class="hero-actions">
-          <a href="/contact.html" class="btn btn-primary">Request a Demo</a>
-          <a href="/platform.html" class="btn btn-outline">Explore Platform</a>
+        <div class="hero-text">
+          <h1>Transparent. Compliant. Kind.</h1>
+          <p>
+            HOA-MX is a modern operations platform for boards, residents, and vendors—
+            built on multi-channel communication, clear governance, and Minnesota CIC
+            compliance.
+          </p>
+          <div class="hero-actions">
+            <a href="/contact.html" class="btn btn-primary">Request a Demo</a>
+            <a href="/platform.html" class="btn btn-outline">Explore Platform</a>
+          </div>
+          <p class="hero-subtext">
+            Billing · Maintenance · Telegram communications · Board governance · Document vault
+          </p>
+        </div>
+        <div class="hero-panel">
+          <div class="hero-panel-header">Core HOA-MX modules</div>
+          <ul>
+            <li>Billing &amp; Payments with clean ledgers</li>
+            <li>Maintenance &amp; Work Orders for residents and vendors</li>
+            <li>Telegram communications archive (mail, email, voicemail, SMS)</li>
+            <li>Board Governance tracking motions and meet &amp; confer</li>
+            <li>Document Vault for bylaws, budgets, insurance</li>
+          </ul>
         </div>
       </section>
 
-      <!-- Cards grid include -->
-      <section data-include="/partials/home-cards.html"></section>
+      <!-- CORE OFFERINGS CARDS -->
+      <section class="section">
+        <h2>What HOA-MX does for your community</h2>
+        <p class="section-lead">
+          Designed to support self-managed and professionally managed associations with the
+          same tools: clear records, efficient operations, and simple communication.
+        </p>
+
+        <!-- Cards included as a partial -->
+        <div data-include="/partials/home-cards.html"></div>
+      </section>
+
+      <!-- HOW IT WORKS -->
+      <section class="section section-muted">
+        <h2>How it works</h2>
+        <div class="columns-3">
+          <div class="info-block">
+            <h3>1. Connect your board</h3>
+            <p>
+              We set up your HOA in HOA-MX with roles for board members, managers, and
+              vendors. No app install required—just email, web, and phone.
+            </p>
+          </div>
+          <div class="info-block">
+            <h3>2. Centralize communication</h3>
+            <p>
+              Letters, emails, voicemails, and texts all feed into Telegram, your unified
+              communication log. Every decision has a paper trail.
+            </p>
+          </div>
+          <div class="info-block">
+            <h3>3. Run your operations</h3>
+            <p>
+              Use billing, work orders, and governance tools to manage the association day
+              to day, with reports ready for audits and annual meetings.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- WHO IT'S FOR -->
+      <section class="section">
+        <h2>Who HOA-MX is for</h2>
+        <div class="columns-3">
+          <div class="info-block">
+            <h3>Self-managed boards</h3>
+            <p>
+              You keep control while HOA-MX handles the boring parts: tracking, documenting,
+              and organizing.
+            </p>
+          </div>
+          <div class="info-block">
+            <h3>Professional managers</h3>
+            <p>
+              Use HOA-MX as your digital backbone to standardize processes across multiple
+              associations while staying compliant.
+            </p>
+          </div>
+          <div class="info-block">
+            <h3>Residents &amp; vendors</h3>
+            <p>
+              Clear channels to submit requests, get updates, and share documents without
+              chasing emails or voicemail.
+            </p>
+          </div>
+        </div>
+      </section>
     </main>
 
     <!-- Footer include -->
     <div data-include="/partials/footer.html"></div>
 
-    <!-- include.js should be last so the DOM exists -->
-    <script src="/assets/include.js"></script>
+    <script src="/assets/include.js" defer></script>
   </body>
 </html>
