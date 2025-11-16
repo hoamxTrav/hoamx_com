@@ -1,0 +1,15 @@
+:root{
+  --softwhite:#F5F2EC; --cement:#B6B3AA; --oak:#C89F63; --matte:#1C1C1B; --terracotta:#C1502E;
+}
+body{margin:0; font:16px/1.45 ui-sans-serif,system-ui,-apple-system,Segoe UI,Arial;}
+.container{max-width:1100px; margin:auto; padding:24px;}
+.site-header,.site-footer{background:var(--softwhite); border-bottom:1px solid #b6b3aa55;}
+.site-footer{border-top:1px solid #b6b3aa55; border-bottom:none;}
+.logo{font-weight:700; color:var(--matte); text-decoration:none; margin-right:16px;}
+nav a{color:var(--matte); text-decoration:none; margin:0 8px; padding:6px 10px; border-radius:10px;}
+nav a:hover{background:#b6b3aa33;}
+.btn{background:var(--terracotta); color:var(--softwhite); padding:8px 12px; border-radius:12px; text-decoration:none}
+.grid{display:grid; gap:16px; grid-template-columns:repeat(auto-fit,minmax(260px,1fr));}
+.card{background:#fff; border:1px solid #b6b3aa66; border-radius:16px; padding:16px;}
+.title{color:var(--matte); font-weight:600;}
+.subtitle{color:#1C1C1B99; margin:.3rem 0 .6rem;}
