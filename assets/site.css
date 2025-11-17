@@ -235,3 +235,39 @@ body {
   margin: 0;
   color: rgba(28,28,27,0.78);
 }
+/* CONTACT FORM STYLES */
+.contact-form {
+  margin-top: 1.5rem;
+  max-width: 800px;
+}
+
+.form-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.form-row {
+  margin-top: 1rem;
+}
+
+label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 0.55rem 0.75rem;
+  border-radius: 8px;
+  border: 1px solid rgba(28, 28, 27, 0.3);
+  font-size: 1rem;
+  background: #fff;
+}
+
+input:focus, select:focus, textarea:focus {
+  outline: none;
+  border-color: var(--terracotta);
+  box-shadow: 0 0 0 2px rgba(193, 80, 46, 0.2);
+}
