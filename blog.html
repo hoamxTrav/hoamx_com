@@ -1,110 +1,237 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>HOA-MX</title>
-  <meta name="description" content="Modern HOA management for real boards and real neighbors.">
-  <meta name="theme-color" content="#1C1C1B">
-  <link rel="icon" type="image/x-icon" href="images/favicon.ico">
-  <link rel="stylesheet" href="theme.css">
-</head>
-<body>
-  <header class="site-header">
-    <div class="container header-inner">
-      <div class="brand">
-        <img class="logo" src="images/logo.png" alt="HOA-MX logo">
-        <span class="wordmark">HOA-MX</span>
-      </div>
-      <nav class="nav">
-        <a href="#demo" class="btn-ghost btn">Request a demo</a>
-      </nav>
-    </div>
-  </header>
+  <head>
+    <meta charset="utf-8" />
+    <title>HOA-MX Blog &amp; Insights</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="stylesheet" href="/assets/site.css" />
+  </head>
+  <body>
+    <!-- Header include -->
+    <div data-include="/partials/header.html"></div>
 
-  <main>
-    <section class="hero">
-      <div class="container">
-        <h1>Modern HOA management, without the noise.</h1>
-        <p class="lede">
-          Collect payments, send letters, manage vendors, and keep everyone in the loop. Built for real boards and real neighbors.
+    <main class="container">
+      <!-- PAGE HERO -->
+      <section class="section">
+        <h1>HOA-MX Blog &amp; Insights</h1>
+        <p class="section-lead">
+          Research, lessons, and practical ideas drawn from property management,
+          scaling operations, and risk management. Curated to help boards and
+          managers run communities that are transparent, compliant, and kind.
         </p>
-        <div style="margin-top:16px">
-          <a class="btn" href="#demo">Request a demo</a>
+
+        <div class="columns-3">
+          <div class="info-block">
+            <h3>Property management reality</h3>
+            <p>
+              Challenges like maintenance, emergencies, rising costs, and tenant
+              relationships show why structure, documentation, and clear communication
+              matter.
+            </p>
+          </div>
+          <div class="info-block">
+            <h3>Scaling with systems</h3>
+            <p>
+              Articles on scaling property management firms emphasize processes,
+              automation, and financial planning instead of just “more doors.”
+            </p>
+          </div>
+          <div class="info-block">
+            <h3>Risk &amp; compliance</h3>
+            <p>
+              Bad management is a liability. We highlight red flags, documentation,
+              and regulatory obligations that owners and boards can’t ignore.
+            </p>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section id="demo" class="section">
-      <div class="container card">
-        <h2 class="section-title">Request a Demo</h2>
-        <p class="section-subtitle">Tell us where to reach you and we’ll follow up.</p>
+      <!-- FEATURED ARTICLES -->
+      <section class="section">
+        <h2>Featured Articles</h2>
+        <p class="section-lead">
+          These articles form the backbone of how HOA-MX thinks about property
+          management: clarity in operations, safety in compliance, and discipline
+          in scaling.
+        </p>
 
-        <form id="trialForm" class="grid form-grid" novalidate>
-          <div class="field">
-            <label for="firstName">First Name</label>
-            <input id="firstName" name="firstName" placeholder="First name">
+        <div class="cards-grid">
+          <!-- Bad Property Management -->
+          <article class="card">
+            <h3>Bad Property Management Is a Liability</h3>
+            <p>
+              Why “set and forget” management is dangerous. This piece walks through
+              red flags like poor communication, late payments, hidden fees, lack of
+              inspections, and legal exposure when tenant rights are violated.
+            </p>
+            <p>
+              It argues that owners are ultimately responsible for breaches of
+              fair housing laws, hazardous conditions, and mishandled deposits,
+              and stresses the importance of documentation if you need to correct
+              or terminate a management contract.
+            </p>
+            <p class="card-link">Coming soon: HOA-MX takeaways on building an audit-ready vendor record.</p>
+          </article>
+
+          <!-- Challenges for Property Managers -->
+          <article class="card">
+            <h3>What Are the Biggest Challenges for a Property Manager?</h3>
+            <p>
+              This article outlines the realities of keeping property maintained,
+              responding 24/7 to emergencies, managing rising costs, and dealing
+              with difficult tenants and changing regulations.
+            </p>
+            <p>
+              It frames rental ownership as a true business: owners must balance ROI
+              with safety, compliance, and time demands — often leading them to hire
+              professional managers when the workload becomes unsustainable.
+            </p>
+            <p class="card-link">Coming soon: How HOA-MX models these pains into Telegram + work-order flows.</p>
+          </article>
+
+          <!-- Top Business Scaling Strategies -->
+          <article class="card">
+            <h3>Top Business Scaling Strategies for Your Property Management Company</h3>
+            <p>
+              A deep dive into what “scaling” actually means: not just adding more
+              doors, but building efficient, standardized processes, automation,
+              and financial planning so growth doesn’t break the system.
+            </p>
+            <p>
+              It emphasizes automation of rent collection, tenant communication, and
+              maintenance scheduling, plus budgeting for tools, staffing, and cash
+              reserves to support sustainable expansion.
+            </p>
+            <p class="card-link">Coming soon: How HOA-MX’s “platform + services” mirrors these strategies for HOAs.</p>
+          </article>
+
+          <!-- Four Keys to Scaling a PMC -->
+          <article class="card">
+            <h3>Four Keys to Successfully Scaling a Property Management Company</h3>
+            <p>
+              Centered on an interview with a CEO who scaled to thousands of units,
+              this article highlights four keys: SEO and digital marketing, constant
+              process review, hiring the right people, and investing in legal and
+              compliance.
+            </p>
+            <p>
+              The growth story shows how disciplined marketing, detailed handbooks,
+              and clearly defined roles turn chaotic growth into a repeatable,
+              scalable operation.
+            </p>
+            <p class="card-link">Coming soon: Using HOA-MX to document roles, playbooks, and decision trails.</p>
+          </article>
+
+          <!-- 19 Scaling Challenges -->
+          <article class="card">
+            <h3>19 Common Challenges When Trying to Scale Operations</h3>
+            <p>
+              A broader business article that applies directly to property and HOA
+              management: growing too fast, strained culture, declining quality,
+              stagnant leadership, misaligned focus, and fragmented tools.
+            </p>
+            <p>
+              The recurring theme is that scaling fails when leaders neglect systems,
+              standards, communication, and unified data — exactly the gaps HOA-MX
+              is designed to close.
+            </p>
+            <p class="card-link">Coming soon: Inside HOA-MX’s Open Problem List (OPL) for continuous improvement.</p>
+          </article>
+        </div>
+      </section>
+
+      <!-- HOA-MX PERSPECTIVE SERIES -->
+      <section class="section section-muted">
+        <h2>HOA-MX Perspective Series</h2>
+        <p class="section-lead">
+          Beyond external articles, HOA-MX will publish its own perspective pieces on
+          how these themes translate into everyday HOA operations.
+        </p>
+
+        <div class="cards-grid">
+          <article class="card">
+            <h3>From “Bad PM Red Flags” to Vendor Scorecards</h3>
+            <p>
+              Inspired by liability-focused content, this series will show how to turn
+              subjective frustration (“our landscaper is terrible”) into objective,
+              logged performance data tied to contracts, COIs, and inspection photos.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>Scaling Without Losing Your Mind (Or Your Records)</h3>
+            <p>
+              Drawing on scaling and process articles, we’ll outline how an HOA can
+              grow from a volunteer-run spreadsheet to a documented, audit-ready
+              system without outsourcing its soul to a third-party manager.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>Telegram as the Anti-Fragmentation Tool</h3>
+            <p>
+              Inspired by warnings about data fragmentation and inefficient tools,
+              we’ll explain how the Telegram concept unifies letters, email,
+              voicemail, SMS, and AI chat into one canonical source of truth.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>Compliance by Design, Not by Panic</h3>
+            <p>
+              We’ll connect legal and risk content to Minnesota CIC realities:
+              documenting meet-and-confer, fines, notices, and insurance decisions
+              directly in the platform so compliance is baked in, not bolted on.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <!-- CATEGORIES / TAGS -->
+      <section class="section">
+        <h2>Browse by theme</h2>
+        <div class="columns-3">
+          <div class="info-block">
+            <h3>Risk &amp; Compliance</h3>
+            <p>
+              Articles on legal exposure, fair housing, documentation, and firing or
+              replacing bad management partners.
+            </p>
           </div>
-
-          <div class="field">
-            <label for="email">Email</label>
-            <input id="email" name="email" type="email" placeholder="name@example.com" required>
+          <div class="info-block">
+            <h3>Scaling &amp; Strategy</h3>
+            <p>
+              Lessons on growth from property management and broader business
+              operations: systems, leadership, finance, and automation.
+            </p>
           </div>
-
-          <div class="field">
-            <label for="hoaName">HOA / Association Name</label>
-            <input id="hoaName" name="hoaName" placeholder="e.g., Rice Lake Terrace">
+          <div class="info-block">
+            <h3>Everyday Operations</h3>
+            <p>
+              The day-to-day: maintenance, emergencies, tenants, vendors, and how
+              structured processes reduce stress for boards and owners.
+            </p>
           </div>
+        </div>
+      </section>
 
-          <div class="field">
-            <label for="boardRole">Board Role</label>
-            <input id="boardRole" name="boardRole" placeholder="President, Treasurer, etc.">
-          </div>
+      <!-- CTA -->
+      <section class="section section-muted">
+        <h2>Get HOA-MX updates in your inbox</h2>
+        <p class="section-lead">
+          As we publish summaries and HOA-MX perspectives on these topics, we’ll
+          share examples, checklists, and templates you can use with your own board.
+        </p>
+        <div class="hero-actions">
+          <a href="/contact.html" class="btn btn-primary">Ask for early access</a>
+          <a href="/platform.html" class="btn btn-outline">See how the platform works</a>
+        </div>
+      </section>
+    </main>
 
-          <div class="actions">
-            <button type="submit" class="btn">Request Demo</button>
-            <p id="formMsg" class="form-msg" aria-live="polite"></p>
-          </div>
-        </form>
-      </div>
-    </section>
-  </main>
+    <!-- Footer include -->
+    <div data-include="/partials/footer.html"></div>
 
-  <footer class="site-footer">
-    <div class="container">
-      <small>© <span id="y"></span> HOA-MX. All rights reserved.</small>
-    </div>
-  </footer>
-
-  <script>
-    document.getElementById('y').textContent = new Date().getFullYear();
-    fetch('/api/logvisit', { method:'POST' }).catch(()=>{});
-
-    const f = document.getElementById('trialForm');
-    const m = document.getElementById('formMsg');
-
-    f.addEventListener('submit', async (e) => {
-      e.preventDefault();
-      m.textContent = '';
-      const body = {
-        firstName: document.getElementById('firstName').value || null,
-        email:     document.getElementById('email').value || '',
-        hoaName:   document.getElementById('hoaName').value || null,
-        boardRole: document.getElementById('boardRole').value || null,
-        source: 'StaticWeb'
-      };
-      if (!body.email) { m.textContent = 'Please enter a valid email.'; return; }
-
-      try {
-        const res = await fetch('/api/submitTrial', {
-          method:'POST',
-          headers:{ 'Content-Type':'application/json' },
-          body: JSON.stringify(body)
-        });
-        if (res.ok) { m.textContent = 'Thanks! We’ll be in touch shortly.'; f.reset(); }
-        else { m.textContent = 'Error: ' + (await res.text() || res.status); }
-      } catch { m.textContent = 'Network error. Please try again.'; }
-    });
-  </script>
-</body>
+    <script src="/assets/include.js" defer></script>
+  </body>
 </html>
