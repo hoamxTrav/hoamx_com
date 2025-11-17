@@ -1,110 +1,319 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>HOA-MX</title>
-  <meta name="description" content="Modern HOA management for real boards and real neighbors.">
-  <meta name="theme-color" content="#1C1C1B">
-  <link rel="icon" type="image/x-icon" href="images/favicon.ico">
-  <link rel="stylesheet" href="theme.css">
-</head>
-<body>
-  <header class="site-header">
-    <div class="container header-inner">
-      <div class="brand">
-        <img class="logo" src="images/logo.png" alt="HOA-MX logo">
-        <span class="wordmark">HOA-MX</span>
-      </div>
-      <nav class="nav">
-        <a href="#demo" class="btn-ghost btn">Request a demo</a>
-      </nav>
-    </div>
-  </header>
+  <head>
+    <meta charset="utf-8" />
+    <title>HOA-MX Compliance &amp; Governance</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="stylesheet" href="/assets/site.css" />
+  </head>
+  <body>
+    <!-- Header include -->
+    <div data-include="/partials/header.html"></div>
 
-  <main>
-    <section class="hero">
-      <div class="container">
-        <h1>Modern HOA management, without the noise.</h1>
-        <p class="lede">
-          Collect payments, send letters, manage vendors, and keep everyone in the loop. Built for real boards and real neighbors.
+    <main class="container">
+      <!-- PAGE HERO -->
+      <section class="section">
+        <h1>Compliance &amp; Governance</h1>
+        <p class="section-lead">
+          HOA-MX is designed around Minnesota common interest community law:
+          clear notices, documented decisions, and durable records. The platform
+          does the organizing work so your board can focus on judgment calls,
+          not paperwork.
         </p>
-        <div style="margin-top:16px">
-          <a class="btn" href="#demo">Request a demo</a>
+
+        <div class="columns-3">
+          <div class="info-block">
+            <h3>Minnesota CIC focus</h3>
+            <p>
+              HOA-MX is structured around Minnesota’s common interest community
+              framework, including financial reporting, notice rules, and
+              evolving reforms such as Senate File 1750.
+            </p>
+          </div>
+          <div class="info-block">
+            <h3>Documentation by default</h3>
+            <p>
+              Every payment, motion, notice, and conversation can be logged in
+              Telegram, the Document Vault, or the reporting layer for future
+              reference.
+            </p>
+          </div>
+          <div class="info-block">
+            <h3>Board still in control</h3>
+            <p>
+              HOA-MX is a recordkeeping and operations platform, not a law firm.
+              Your board and legal counsel ultimately interpret and apply the law.
+            </p>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section id="demo" class="section">
-      <div class="container card">
-        <h2 class="section-title">Request a Demo</h2>
-        <p class="section-subtitle">Tell us where to reach you and we’ll follow up.</p>
+      <!-- MN COMPLIANCE AT A GLANCE -->
+      <section class="section section-muted">
+        <h2>Compliance at a glance</h2>
+        <p class="section-lead">
+          While every association’s documents are unique, most Minnesota HOAs
+          share a few core compliance obligations. HOA-MX is built to support
+          those patterns without giving legal advice.
+        </p>
 
-        <form id="trialForm" class="grid form-grid" novalidate>
-          <div class="field">
-            <label for="firstName">First Name</label>
-            <input id="firstName" name="firstName" placeholder="First name">
+        <div class="columns-3">
+          <div class="info-block">
+            <h3>Notices &amp; “meet and confer”</h3>
+            <p>
+              Track when notices are sent, how they were delivered, and any
+              follow-up meetings or “meet and confer” conversations related to
+              disputes or enforcement.
+            </p>
           </div>
-
-          <div class="field">
-            <label for="email">Email</label>
-            <input id="email" name="email" type="email" placeholder="name@example.com" required>
+          <div class="info-block">
+            <h3>Fines, fees &amp; assessments</h3>
+            <p>
+              Configure late fees, fines, and assessments so they can be applied
+              consistently, with a clear ledger and supporting documentation for
+              each charge.
+            </p>
           </div>
-
-          <div class="field">
-            <label for="hoaName">HOA / Association Name</label>
-            <input id="hoaName" name="hoaName" placeholder="e.g., Rice Lake Terrace">
+          <div class="info-block">
+            <h3>Records &amp; retention</h3>
+            <p>
+              Maintain minutes, budgets, correspondence, and financial records
+              for multi-year retention, with export options when auditors,
+              lenders, or owners request them.
+            </p>
           </div>
+        </div>
+      </section>
 
-          <div class="field">
-            <label for="boardRole">Board Role</label>
-            <input id="boardRole" name="boardRole" placeholder="President, Treasurer, etc.">
+      <!-- HOW HOA-MX SUPPORTS COMPLIANCE -->
+      <section class="section">
+        <h2>How HOA-MX supports compliance</h2>
+        <p class="section-lead">
+          Compliance isn’t a separate module in HOA-MX; it’s built into how
+          core features work: billing, communications, governance, documents,
+          and reports.
+        </p>
+
+        <div class="cards-grid">
+          <article class="card">
+            <h3>Billing &amp; Payments</h3>
+            <p>
+              Billing keeps a complete, unit-level ledger of dues, assessments,
+              and fines, along with the dates they were applied and any related
+              notes or documents. Late-fee rules can be configured to follow
+              board policy that reflects Minnesota limits on fines and fees.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>Telegram Communications Archive</h3>
+            <p>
+              Telegram centralizes letters, email, voicemail, SMS, and AI chat
+              into a searchable log. Each entry can be tagged to a unit,
+              violation, motion, or claim, creating a verifiable trail of how
+              the board communicated and when.
+            </p>
+            <p>
+              This supports notice requirements and makes it easier to show
+              what was said if a disagreement escalates.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>Board Governance</h3>
+            <p>
+              Motions, votes, and meetings can be recorded with links to
+              Telegram threads and documents. “Meet and confer” conversations
+              or policy decisions can be tagged so the board can show it
+              followed a consistent process in response to issues.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>Document Vault</h3>
+            <p>
+              The Document Vault stores bylaws, rules, insurance policies,
+              budgets, and key resolutions in a categorized, permanent archive.
+              Documents can be linked to the meetings and communications that
+              created them, supporting transparency and continuity.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>Directory &amp; Contact Center</h3>
+            <p>
+              A unified directory of residents, board members, and vendors helps
+              ensure communication is sent to the right parties, with call
+              routing and voicemail transcription for boards that opt into a
+              call-center model.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>Reports &amp; Audits</h3>
+            <p>
+              Reporting tools generate summaries of payments, violations, and
+              maintenance spending, easing the burden of annual meetings and
+              formal audits. Exported reports and bundled documents help
+              demonstrate that the board is following its financial and
+              record-keeping obligations.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <!-- ANNUAL LEGAL & COMPLIANCE SERVICES -->
+      <section class="section section-muted">
+        <h2>Legal, compliance, and recordkeeping services</h2>
+        <p class="section-lead">
+          Some boards want more than software. HOA-MX can be paired with annual
+          professional services that use the same data your board already has in
+          the platform.
+        </p>
+
+        <div class="cards-grid">
+          <article class="card">
+            <h3>Legal &amp; Compliance Support</h3>
+            <p>
+              Annual review of governing documents, notice and fine language,
+              and enforcement procedures, with attention to Minnesota HOA law
+              and recent reforms. Support includes drafting or refreshing
+              “meet and confer” policies and conflict-of-interest disclosures.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>Accounting &amp; Treasury Administration</h3>
+            <p>
+              Budget preparation, reserve scheduling, bank reconciliation,
+              vendor 1099/W-9 tracking, and year-end financial reporting
+              aligned with common HOA requirements.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>Recordkeeping &amp; Archival Compliance</h3>
+            <p>
+              Indexing minutes, budgets, and correspondence, ensuring secure
+              backup, and performing periodic audits of Telegram-style
+              communications so boards can show they’ve kept the records
+              they’re supposed to keep.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>Insurance &amp; Risk Management</h3>
+            <p>
+              Support around master policy renewals, directors and officers
+              coverage, and coordination of claims, tied back to the
+              documentation already stored in HOA-MX.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <!-- BOARD VS PLATFORM RESPONSIBILITIES -->
+      <section class="section">
+        <h2>Board responsibilities vs. HOA-MX responsibilities</h2>
+        <p class="section-lead">
+          HOA-MX gives your board better information and documentation; it does
+          not replace your judgment or your attorney.
+        </p>
+
+        <div class="columns-3">
+          <div class="info-block">
+            <h3>What the board controls</h3>
+            <p>
+              Interpreting bylaws and Minnesota law with your attorney, setting
+              policies on fines and enforcement, approving budgets, choosing
+              vendors, and making final decisions on disputes.
+            </p>
           </div>
-
-          <div class="actions">
-            <button type="submit" class="btn">Request Demo</button>
-            <p id="formMsg" class="form-msg" aria-live="polite"></p>
+          <div class="info-block">
+            <h3>What HOA-MX controls</h3>
+            <p>
+              Capturing and organizing data: ledgers, communications, documents,
+              motions, and reports. Making it easy to see who decided what, and
+              when, with which information.
+            </p>
           </div>
-        </form>
-      </div>
-    </section>
-  </main>
+          <div class="info-block">
+            <h3>Shared responsibility</h3>
+            <p>
+              Configuring workflows and templates so that the way your board
+              already works—and the advice you receive from counsel—is reflected
+              faithfully in how the platform behaves.
+            </p>
+          </div>
+        </div>
+      </section>
 
-  <footer class="site-footer">
-    <div class="container">
-      <small>© <span id="y"></span> HOA-MX. All rights reserved.</small>
-    </div>
-  </footer>
+      <!-- RECORD RETENTION PRACTICES -->
+      <section class="section section-muted">
+        <h2>Record retention practices</h2>
+        <p class="section-lead">
+          HOA-MX is designed around multi-year retention of critical records so
+          boards can respond to owner requests, audits, or disputes without
+          scrambling.
+        </p>
 
-  <script>
-    document.getElementById('y').textContent = new Date().getFullYear();
-    fetch('/api/logvisit', { method:'POST' }).catch(()=>{});
+        <div class="cards-grid">
+          <article class="card">
+            <h3>Minutes &amp; decisions</h3>
+            <p>
+              Meeting minutes, motions, and votes can be stored for years,
+              linked to the documents and Telegram conversations that informed
+              each decision.
+            </p>
+          </article>
 
-    const f = document.getElementById('trialForm');
-    const m = document.getElementById('formMsg');
+          <article class="card">
+            <h3>Financial records</h3>
+            <p>
+              Ledgers, bank reconciliation data, invoices, and year-end reports
+              are kept in a structured way that supports CPA review and tax
+              preparation.
+            </p>
+          </article>
 
-    f.addEventListener('submit', async (e) => {
-      e.preventDefault();
-      m.textContent = '';
-      const body = {
-        firstName: document.getElementById('firstName').value || null,
-        email:     document.getElementById('email').value || '',
-        hoaName:   document.getElementById('hoaName').value || null,
-        boardRole: document.getElementById('boardRole').value || null,
-        source: 'StaticWeb'
-      };
-      if (!body.email) { m.textContent = 'Please enter a valid email.'; return; }
+          <article class="card">
+            <h3>Communications archive</h3>
+            <p>
+              Letters, emails, voicemails, and SMS can be retained as part of a
+              unified history so the board can show how it communicated over
+              time, not just what the current board remembers.
+            </p>
+          </article>
+        </div>
+      </section>
 
-      try {
-        const res = await fetch('/api/submitTrial', {
-          method:'POST',
-          headers:{ 'Content-Type':'application/json' },
-          body: JSON.stringify(body)
-        });
-        if (res.ok) { m.textContent = 'Thanks! We’ll be in touch shortly.'; f.reset(); }
-        else { m.textContent = 'Error: ' + (await res.text() || res.status); }
-      } catch { m.textContent = 'Network error. Please try again.'; }
-    });
-  </script>
-</body>
+      <!-- DISCLAIMER / CTA -->
+      <section class="section">
+        <h2>Important note: HOA-MX is not a law firm</h2>
+        <p class="section-lead">
+          HOA-MX helps your board organize information and follow your own
+          policies more consistently. It does not provide legal advice or
+          guarantee compliance with any statute.
+        </p>
+
+        <p>
+          Boards should review their governing documents and processes with
+          qualified legal counsel, especially when adopting new enforcement
+          policies, changing fine structures, or responding to serious disputes.
+          HOA-MX is built to make that work easier by providing clean records,
+          not to replace the attorney–client relationship.
+        </p>
+
+        <div class="hero-actions" style="margin-top: 1.5rem;">
+          <a href="/contact.html" class="btn btn-primary">Talk about compliance workflows</a>
+          <a href="/platform.html" class="btn btn-outline">See core modules</a>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer include -->
+    <div data-include="/partials/footer.html"></div>
+
+    <script src="/assets/include.js" defer></script>
+  </body>
 </html>
