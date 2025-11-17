@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>HOA-MX Roadmap</title>
+    <title>HOA-MX Customer Roadmap</title>
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <link rel="stylesheet" href="/assets/site.css" />
   </head>
@@ -11,460 +11,260 @@
     <div data-include="/partials/header.html"></div>
 
     <main class="container">
-      <!-- PAGE HERO -->
+      <!-- HERO / INTRO -->
       <section class="section">
-        <h1>HOA-MX Roadmap</h1>
+        <h1>HOA-MX Customer Roadmap</h1>
         <p class="section-lead">
-          HOA-MX is being built in phases from foundation and compliance to
-          operational intelligence and analytics. This roadmap outlines what
-          each phase delivers for boards, residents, and vendors.
+          HOA-MX is designed to be adopted in stages. You don’t have to become a
+          fully digitized, data-driven association overnight. This roadmap shows
+          how boards typically grow with HOA-MX—from stabilizing communication
+          to intelligent, data-backed governance.
         </p>
-
-        <div class="columns-3">
-          <div class="info-block">
-            <h3>2026: Foundation &amp; Platform</h3>
-            <p>
-              Finalize schema, align with Minnesota CIC law, and ship the core
-              platform across billing, maintenance, Telegram, governance, and
-              the document vault.
-            </p>
-          </div>
-          <div class="info-block">
-            <h3>2026: Services &amp; Operations</h3>
-            <p>
-              Automate accounting, insurance, vendor oversight, board training,
-              and property-specific modules like trees, grounds, and rentals.
-            </p>
-          </div>
-          <div class="info-block">
-            <h3>2027+: Pilot &amp; Intelligence</h3>
-            <p>
-              Validate with real associations, then layer on summaries,
-              predictive budgeting, and integrations for long-term governance.
-            </p>
-          </div>
-        </div>
+        <p>
+          Each phase builds on the last. You can pause where you’re comfortable,
+          or continue toward advanced services like reserve investment support
+          and predictive analytics.
+        </p>
       </section>
 
       <!-- QUICK JUMP NAV -->
       <section class="section section-muted">
-        <h2>Roadmap phases</h2>
+        <h2>How associations grow with HOA-MX</h2>
         <div class="columns-3">
           <div class="info-block">
-            <h3><a href="#phase1">Phase 1 – Foundation &amp; Compliance</a></h3>
-            <p>Q1 2026 · Structural, legal, and data backbone.</p>
+            <h3><a href="#phase-1">Phase 1 – Connect &amp; Stabilize</a></h3>
+            <p>Clean communication and records as a starting point.</p>
           </div>
           <div class="info-block">
-            <h3><a href="#phase2">Phase 2 – Core Platform Build</a></h3>
-            <p>Q2 2026 · MVP across 7 core product offerings.</p>
+            <h3><a href="#phase-3">Phase 3 – Governance &amp; Compliance</a></h3>
+            <p>Operate like a structured, defensible organization.</p>
           </div>
           <div class="info-block">
-            <h3><a href="#phase3">Phase 3 – Service Automation</a></h3>
-            <p>Q3 2026 · Annual professional service workflows.</p>
-          </div>
-        </div>
-        <div class="columns-3" style="margin-top: 1rem;">
-          <div class="info-block">
-            <h3><a href="#phase4">Phase 4 – Operational Intelligence</a></h3>
-            <p>Q4 2026 · Trees, grounds, snow, rentals, risk.</p>
-          </div>
-          <div class="info-block">
-            <h3><a href="#phase5">Phase 5 – Pilot &amp; Expansion</a></h3>
-            <p>Q1 2027 · Real HOAs, feedback, scale-up plan.</p>
-          </div>
-          <div class="info-block">
-            <h3><a href="#phase6">Phase 6 – Intelligence &amp; Analytics</a></h3>
-            <p>2027–2028 · Predictive governance and integrations.</p>
+            <h3><a href="#phase-5">Phase 5 – Operational &amp; Financial Intelligence</a></h3>
+            <p>See the property and reserves as a living system.</p>
           </div>
         </div>
       </section>
 
       <!-- PHASE 1 -->
-      <section class="section" id="phase1">
-        <h2>Phase 1 — Foundation &amp; Compliance (Q1 2026)</h2>
+      <section class="section" id="phase-1">
+        <h2>Phase 1 — Connect &amp; Stabilize</h2>
         <p class="section-lead">
-          Finalize the structural, legal, and data backbone of HOA-MX so every
-          later feature sits on a compliant, well-structured base.
+          Clean communication. Clean records. Clear expectations.
         </p>
 
         <div class="cards-grid">
           <article class="card">
-            <h3>Finalize data schema</h3>
-            <p>
-              Confirm fields in the HOA-MX schema for billing, maintenance,
-              communications, directory, and governance so all modules share a
-              single source of truth.
-            </p>
+            <h3>What you adopt</h3>
+            <ul>
+              <li>Unified communications (“Telegram”)</li>
+              <li>Document Vault for bylaws and key policies</li>
+              <li>Resident Directory</li>
+              <li>Basic motions, minutes, and decision tracking</li>
+              <li>Initial compliance scaffolding</li>
+            </ul>
           </article>
+
           <article class="card">
-            <h3>Regulatory alignment</h3>
-            <p>
-              Implement Minnesota Senate File 1750 changes (notice rules, fine
-              limits, meet-and-confer) and §515B.3-118 record-keeping timelines
-              directly into platform logic.
-            </p>
-          </article>
-          <article class="card">
-            <h3>Document Vault &amp; OCR</h3>
-            <p>
-              Stand up the first OCR pipeline for bylaws, insurance policies,
-              and budgets, feeding the Document Vault with searchable text.
-            </p>
-          </article>
-          <article class="card">
-            <h3>Database layer</h3>
-            <p>
-              Deploy the PostgreSQL schema with role-based access, encryption,
-              and a clear separation between HOAs as tenants.
-            </p>
-          </article>
-          <article class="card">
-            <h3>Design finalization</h3>
-            <p>
-              Apply Brand Book V3.1: Terracotta and Natural Oak palette, text
-              contrast rules, and accessibility guidelines.
-            </p>
-          </article>
-          <article class="card">
-            <h3>Board &amp; legal templates</h3>
-            <p>
-              Standardize board governance documents – motions, votes, and
-              compliance logs – so every HOA starts with strong defaults.
-            </p>
+            <h3>What your HOA achieves</h3>
+            <ul>
+              <li>Stable, predictable communication environment</li>
+              <li>Complete historical record of decisions and notices</li>
+              <li>No more lost emails or undocumented board actions</li>
+              <li>Early foundation for board continuity</li>
+            </ul>
           </article>
         </div>
       </section>
 
       <!-- PHASE 2 -->
-      <section class="section" id="phase2">
-        <h2>Phase 2 — Core Platform Build (Q2 2026)</h2>
+      <section class="section" id="phase-2">
+        <h2>Phase 2 — Operate Daily Workflows</h2>
         <p class="section-lead">
-          Deliver the working MVP across the seven core product offerings and
-          run the first live pilot.
+          HOA-MX becomes the daily digital office for the association.
         </p>
 
         <div class="cards-grid">
           <article class="card">
-            <h3>Billing &amp; Payments</h3>
-            <p>
-              Build ACH and manual payment flows, ledger reconciliation, and
-              unit-level history tied directly to the Document Vault and Telegram.
-            </p>
+            <h3>What you adopt</h3>
+            <ul>
+              <li>Billing &amp; Payments modules</li>
+              <li>Maintenance &amp; Work Orders for residents and vendors</li>
+              <li>Reporting tools and audit exports</li>
+              <li>Directory + Contact Center upgrades for phone and voicemail</li>
+            </ul>
           </article>
+
           <article class="card">
-            <h3>Maintenance &amp; Work Orders</h3>
-            <p>
-              Resident → manager → vendor workflow with photos, estimates,
-              status changes, and satisfaction feedback.
-            </p>
-          </article>
-          <article class="card">
-            <h3>Telegram communications</h3>
-            <p>
-              Unified ingestion of mail, email, voicemail, SMS, and chat into a
-              single, searchable communication log.
-            </p>
-          </article>
-          <article class="card">
-            <h3>Directory &amp; Contact Center</h3>
-            <p>
-              Resident, board, and vendor roles with call recording and
-              voicemail transcription, tied to Telegram threads.
-            </p>
-          </article>
-          <article class="card">
-            <h3>Reports &amp; Audits</h3>
-            <p>
-              SQL-based reporting layer and annual summary export (PDF) for
-              payments, violations, and maintenance.
-            </p>
-          </article>
-          <article class="card">
-            <h3>Board Governance</h3>
-            <p>
-              Digital motion and vote tools with compliance tagging for meet-and-
-              confer and other S.F. 1750 requirements.
-            </p>
-          </article>
-          <article class="card">
-            <h3>Document Vault integration</h3>
-            <p>
-              Link documents to Telegram entries and governance events so every
-              decision has supporting evidence.
-            </p>
-          </article>
-          <article class="card">
-            <h3>First pilot</h3>
-            <p>
-              Launch the platform with Rice Lake Terrace (rltta.hoamx.com) to
-              validate workflows, UX, and data structures.
-            </p>
+            <h3>What your HOA achieves</h3>
+            <ul>
+              <li>Day-to-day operations handled cleanly in one place</li>
+              <li>Every dollar tracked and reportable</li>
+              <li>Maintenance accountability with clear status</li>
+              <li>Residents receive predictable, consistent updates</li>
+            </ul>
           </article>
         </div>
       </section>
 
       <!-- PHASE 3 -->
-      <section class="section" id="phase3">
-        <h2>Phase 3 — Professional Service Automation (Q3 2026)</h2>
+      <section class="section" id="phase-3">
+        <h2>Phase 3 — Strengthen Governance &amp; Compliance</h2>
         <p class="section-lead">
-          Build tools that support annual professional services: accounting,
-          insurance, vendor oversight, training, and legal/compliance.
+          Move from “best effort” to a structured, defensible governance model.
         </p>
 
         <div class="cards-grid">
           <article class="card">
-            <h3>Accounting &amp; Treasury</h3>
-            <p>
-              Automated reconciliation, reserve forecasting, and budget views
-              tied directly to the billing and payment modules.
-            </p>
+            <h3>What you adopt</h3>
+            <ul>
+              <li>Advanced governance tools (votes, templates, trails)</li>
+              <li>Compliance alignment with Minnesota CIC rules</li>
+              <li>Archive and retention standards inside HOA-MX</li>
+              <li>Policy enforcement and follow-up workflows</li>
+            </ul>
           </article>
+
           <article class="card">
-            <h3>Insurance &amp; Risk</h3>
-            <p>
-              Renewal tracking and mapping of homeowner vs. master policy claim
-              responsibility, with supporting documents.
-            </p>
-          </article>
-          <article class="card">
-            <h3>Vendor Oversight</h3>
-            <p>
-              Contract expiry reminders, proof-of-insurance logging, and vendor
-              performance snapshots.
-            </p>
-          </article>
-          <article class="card">
-            <h3>Board Training Portal</h3>
-            <p>
-              “Digital Binder” with video and document orientation for new board
-              members and officers.
-            </p>
-          </article>
-          <article class="card">
-            <h3>Legal &amp; Compliance Dashboard</h3>
-            <p>
-              Track amendments, conflicts of interest, meet-and-confer logs, and
-              other compliance events in one view.
-            </p>
-          </article>
-          <article class="card">
-            <h3>Audit Mode</h3>
-            <p>
-              One-click generation of bundles for board minutes, financials, and
-              key communications for audits or disputes.
-            </p>
+            <h3>What your HOA achieves</h3>
+            <ul>
+              <li>Fewer disputes and less ambiguity</li>
+              <li>Decisions that are well documented and defensible</li>
+              <li>Consistent framework for how the board operates</li>
+            </ul>
           </article>
         </div>
       </section>
 
       <!-- PHASE 4 -->
-      <section class="section" id="phase4">
-        <h2>Phase 4 — Operational Intelligence (Q4 2026)</h2>
+      <section class="section" id="phase-4">
+        <h2>Phase 4 — Add Professional Services Support</h2>
         <p class="section-lead">
-          Integrate property-specific and environmental management modules –
-          the physical reality under the financials and communications.
+          Reduce volunteer burden by wrapping structured services around the
+          platform.
         </p>
 
         <div class="cards-grid">
           <article class="card">
-            <h3>Tree Management</h3>
-            <p>
-              GPS, photos, health status, and treatment records for individual
-              trees, linked to vendor work orders.
-            </p>
+            <h3>What you adopt</h3>
+            <ul>
+              <li>Accounting &amp; Treasury administration support</li>
+              <li>Insurance &amp; risk workflows tied to your policies</li>
+              <li>Vendor oversight, RFP cycles, and contract tracking</li>
+              <li>Board training and transition support</li>
+            </ul>
           </article>
+
           <article class="card">
-            <h3>Grounds &amp; Snow</h3>
-            <p>
-              Schedulers, photo evidence capture, and vendor rating dashboards
-              for mowing, trimming, and snow removal.
-            </p>
-          </article>
-          <article class="card">
-            <h3>Landscaping &amp; ARC</h3>
-            <p>
-              Design requests, digital approvals, and homeowner liability forms
-              for improvements and special projects.
-            </p>
-          </article>
-          <article class="card">
-            <h3>Rental &amp; Insurance Tracking</h3>
-            <p>
-              Lease uploads, renewal dates, and insurance-compliance checks for
-              rental units.
-            </p>
-          </article>
-          <article class="card">
-            <h3>Restricted Device Compliance</h3>
-            <p>
-              Signed liability acknowledgments and inspection schedules for
-              higher-risk items like wood-burning fireplaces.
-            </p>
-          </article>
-          <article class="card">
-            <h3>Telegram Intelligence Layer</h3>
-            <p>
-              Semantic tagging of communications into themes such as finance,
-              maintenance, and legal for better reporting.
-            </p>
+            <h3>What your HOA achieves</h3>
+            <ul>
+              <li>Volunteers focus on decisions, not data entry</li>
+              <li>Reduced burnout and smoother leadership changes</li>
+              <li>Self-managed boards operate with semi-professional structure</li>
+            </ul>
           </article>
         </div>
       </section>
 
       <!-- PHASE 5 -->
-      <section class="section" id="phase5">
-        <h2>Phase 5 — Pilot Launch &amp; Expansion (Q1 2027)</h2>
+      <section class="section" id="phase-5">
+        <h2>Phase 5 — Operational Intelligence Layer</h2>
         <p class="section-lead">
-          Validate the full platform across multiple associations and finalize
-          the service model for scale.
+          See the entire property as a living system, not just a set of invoices.
         </p>
 
         <div class="cards-grid">
           <article class="card">
-            <h3>Pilot sites</h3>
-            <p>
-              Run HOA-MX with Rice Lake Terrace and 2–3 additional HOAs
-              representing small, medium, and large tiers.
-            </p>
+            <h3>What you adopt</h3>
+            <ul>
+              <li>Tree management with health, treatment, and cost logs</li>
+              <li>Grounds and snow logs with photos and vendor history</li>
+              <li>Landscaping oversight and seasonal project tracking</li>
+              <li>ARC workflow with homeowner responsibilities</li>
+              <li>Rental &amp; insurance tracking for units</li>
+              <li>Restricted device compliance (e.g., fireplaces) with acknowledgments</li>
+            </ul>
           </article>
+
           <article class="card">
-            <h3>Training &amp; support</h3>
-            <p>
-              Certify call center operators and digital admins to handle
-              Telegram, work orders, and governance flows.
-            </p>
-          </article>
-          <article class="card">
-            <h3>Governance feedback loop</h3>
-            <p>
-              Collect resident and board surveys, analyze Telegram patterns, and
-              refine workflows.
-            </p>
-          </article>
-          <article class="card">
-            <h3>Brand alignment</h3>
-            <p>
-              Deploy the final logo, color themes, and typography from Brand
-              Book V3.1 across pilots.
-            </p>
-          </article>
-          <article class="card">
-            <h3>Marketing &amp; scale-up plan</h3>
-            <p>
-              Publish the 3-tier plan (Minimal / Basic / Premium) and prepare
-              documentation for white-label or franchise deployment.
-            </p>
+            <h3>What your HOA achieves</h3>
+            <ul>
+              <li>Full picture of property operations across seasons</li>
+              <li>Predictable, documented seasonal management</li>
+              <li>Better visibility into physical and liability risk</li>
+            </ul>
           </article>
         </div>
       </section>
 
       <!-- PHASE 6 -->
-      <section class="section" id="phase6">
-        <h2>Phase 6 — Intelligence &amp; Analytics (2027 → 2028)</h2>
+      <section class="section" id="phase-6">
+        <h2>Phase 6 — Financial Maturity &amp; Reserve Strategy</h2>
         <p class="section-lead">
-          Move from structured data capture to predictive governance and
-          automated assistance.
+          Move from reactive repairs to strategic, long-term stewardship.
         </p>
 
         <div class="cards-grid">
           <article class="card">
-            <h3>AI summary layer</h3>
-            <p>
-              Automatically generate meeting minutes, resident letters, and
-              vendor pattern summaries from Telegram and document data.
-            </p>
+            <h3>What you adopt</h3>
+            <ul>
+              <li>Reserve investment guidance and policy support</li>
+              <li>Treasury ladder planning aligned with project timelines</li>
+              <li>Cashflow planning tied to reserve studies and budgets</li>
+              <li>Integrated reporting for interest and reserve positions</li>
+            </ul>
           </article>
+
           <article class="card">
-            <h3>Predictive maintenance &amp; budgeting</h3>
-            <p>
-              Use historical work orders and costs to forecast budgets, reserve
-              needs, and vendor performance trends.
-            </p>
-          </article>
-          <article class="card">
-            <h3>Open Public Lounge (OPL)</h3>
-            <p>
-              Emoji-based resident engagement board with low-pressure,
-              moderated channels for events, ARC, and board topics.
-            </p>
-          </article>
-          <article class="card">
-            <h3>Integrations</h3>
-            <p>
-              Connect to accounting APIs, insurance partners, and municipal
-              reporting so data flows automatically where it needs to go.
-            </p>
+            <h3>What your HOA achieves</h3>
+            <ul>
+              <li>Stronger reserve stability over time</li>
+              <li>Better funding for roofs, paving, and large projects</li>
+              <li>Clear boundaries on investment risk and fiduciary duty</li>
+            </ul>
           </article>
         </div>
       </section>
 
-      <!-- GUIDING PRINCIPLES -->
-      <section class="section section-muted">
-        <h2>Guiding principles</h2>
+      <!-- PHASE 7 -->
+      <section class="section" id="phase-7">
+        <h2>Phase 7 — Predictive HOA Intelligence (Optional)</h2>
         <p class="section-lead">
-          Every phase of the roadmap is anchored in a few non-negotiable
-          principles.
+          For boards that want to move from documentation to anticipation.
         </p>
 
-        <div class="columns-3">
-          <div class="info-block">
-            <h3>Transparency first</h3>
-            <p>
-              Every message and document should be traceable, searchable, and
-              tied back to decisions and spending.
-            </p>
-          </div>
-          <div class="info-block">
-            <h3>Human-centered automation</h3>
-            <p>
-              Automation reduces workload and confusion; people still make the
-              important calls and maintain relationships.
-            </p>
-          </div>
-          <div class="info-block">
-            <h3>Compliance anchored</h3>
-            <p>
-              Minnesota CIC law is built into the product design, not treated as
-              an afterthought or optional add-on.
-            </p>
-          </div>
-        </div>
+        <div class="cards-grid">
+          <article class="card">
+            <h3>What you adopt</h3>
+            <ul>
+              <li>AI meeting summaries and letter drafting</li>
+              <li>Pattern detection in maintenance, spending, and violations</li>
+              <li>Predictive budgeting and seasonal forecasting</li>
+            </ul>
+          </article>
 
-        <div class="columns-3" style="margin-top: 1rem;">
-          <div class="info-block">
-            <h3>Accessible by design</h3>
-            <p>
-              Readable fonts, strong contrast, and mobile-first layouts so
-              residents of all ages can use the system.
-            </p>
-          </div>
-          <div class="info-block">
-            <h3>Scalable architecture</h3>
-            <p>
-              Each HOA runs as a modular tenant instance on the same platform,
-              allowing growth without losing control.
-            </p>
-          </div>
-          <div class="info-block">
-            <h3>Documented evolution</h3>
-            <p>
-              Changes to workflows, law, and branding are recorded so future
-              boards can see how the system evolved.
-            </p>
-          </div>
+          <article class="card">
+            <h3>What your HOA achieves</h3>
+            <ul>
+              <li>Strategic, proactive governance instead of firefighting</li>
+              <li>Data-driven budgets rooted in real history</li>
+              <li>Forward visibility into issues before they escalate</li>
+            </ul>
+          </article>
         </div>
       </section>
 
       <!-- CTA -->
-      <section class="section">
-        <h2>Follow the HOA-MX build</h2>
+      <section class="section section-muted">
+        <h2>Choose your starting phase</h2>
         <p class="section-lead">
-          As we progress through these phases, we’ll share updates, screenshots,
-          and lessons from real associations adopting HOA-MX.
+          Some associations begin with communication and records only. Others are
+          ready to plug in billing, maintenance, and professional services right
+          away. HOA-MX can meet you where you are and grow with your board.
         </p>
         <div class="hero-actions">
-          <a href="/contact.html" class="btn btn-primary">Talk about joining a pilot</a>
-          <a href="/platform.html" class="btn btn-outline">Explore current features</a>
+          <a href="/contact.html" class="btn btn-primary">Talk about your roadmap</a>
+          <a href="/platform.html" class="btn btn-outline">Review platform modules</a>
         </div>
       </section>
     </main>
