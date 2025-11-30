@@ -1,7 +1,7 @@
 
-# HOA-MX Static Web App
+# HOAMX Static Web App
 
-A minimal, brand-true landing page for **HOA-MX** deployed on **Azure Static Web Apps (SWA)** with two serverless endpoints:
+A minimal, brand-true landing page for **HOAMX** deployed on **Azure Static Web Apps (SWA)** with two serverless endpoints:
 - `/api/logvisit` — logs a visit (IP + timestamp) to logs (extend to persist later).
 - `/api/submitTrial` — stores demo requests in **Azure SQL** via a connection string provided securely via **Azure Key Vault**.
 
@@ -36,13 +36,14 @@ A minimal, brand-true landing page for **HOA-MX** deployed on **Azure Static Web
 
 ## Branding
 
-This theme implements the **HOA-MX Brand Book v3.1** palette:
+This theme implements the **HOAMX Brand Book v3.1** palette:
 
 - Soft White `#F5F2EC`
 - Cement Gray `#B6B3AA`
 - Natural Oak `#C89F63`
 - Matte Black `#1C1C1B`
 - Terracotta `#C1502E`
+- #1E3A8A
 
 The favicon is referenced with:
 
@@ -194,4 +195,4 @@ If you attached a separate Function App:
 
 ## License
 
-Proprietary — © HOA-MX. All rights reserved.
+Proprietary — © HOAMX LLC. All rights reserved.
