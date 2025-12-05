@@ -9,7 +9,6 @@ on:
 
 jobs:
   build_and_deploy:
-    # Same logic as your Azure job: run on push, or on PR events except closed
     if: github.event_name == 'push' || (github.event_name == 'pull_request' && github.event.action != 'closed')
     runs-on: ubuntu-latest
 
@@ -17,16 +16,13 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      # No npm / no build for now – static site from root per firebase.json
-      # If you add a build later, we can insert npm steps here.
+      # No build step for now – static site served from repo root via firebase.json ("public": ".")
+
+      - name: Install Firebase CLI
+        run: npm install -g firebase-tools
 
       - name: Deploy to Firebase Hosting
-        uses: FirebaseExtended/action-hosting-deploy@v0
-        with:
-          repoToken: ${{ secrets.GITHUB_TOKEN }}
-          token: ${{ secrets.FIREBASE_TOKEN }}
-          channelId: live
-          projectId: hoamx1   # <- make sure this matches your Firebase project ID
-
-  # Optional: a separate job for PR previews (not required)
-  # For now, we skip a "close_pr" equivalent – Firebase preview channels auto-expire.
+        env:
+          FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
+        run: firebase deploy --only hosting --project hoamx1
+        # ^ change hoamx1 if your Firebase project ID is different
