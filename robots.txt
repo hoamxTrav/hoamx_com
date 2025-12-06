@@ -3,3 +3,5 @@ Allow: /
 
 # Sitemap reference
 Sitemap: https://hoamx.com/sitemap.xml
+
+Host: hoamx.com
