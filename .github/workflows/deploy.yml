@@ -23,6 +23,8 @@ jobs:
 
       - name: Deploy to Firebase Hosting
         env:
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+        env:
           FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
         run: firebase deploy --only hosting --project hoamx1
         # ^ change hoamx1 if your Firebase project ID is different
