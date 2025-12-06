@@ -1,9 +1,9 @@
 
 # HOAMX Static Web App
 
-A minimal, brand-true landing page for **HOAMX** deployed on **Azure Static Web Apps (SWA)** with two serverless endpoints:
+A minimal, brand-true landing page for **HOAMX** deployed on **Google Cloud Platform** with two serverless endpoints:
 - `/api/logvisit` — logs a visit (IP + timestamp) to logs (extend to persist later).
-- `/api/submitTrial` — stores demo requests in **Azure SQL** via a connection string provided securely via **Azure Key Vault**.
+- `/api/submitTrial` — stores demo requests in Google **Database** via a connection string provided securely via **Vault**.
 
 ---
 
