@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.hoamx.com/sitemap.xml
+# Sitemap reference
+Sitemap: https://hoamx.com/sitemap.xml
