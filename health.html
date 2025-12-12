@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>HOAMX Health Check</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="/assets/site.css" />
+  <style>
+    .health-table {
+      width: 100%;
+      max-width: 600px;
+      border-collapse: collapse;
+      margin: 2rem auto;
+    }
+    .health-table th,
+    .health-table td {
+      padding: 0.75rem 1rem;
+      border-bottom: 1px solid #ddd;
+      text-align: left;
+    }
+    .status-badge {
+      display: inline-block;
+      padding: 0.25rem 0.6rem;
+      border-radius: 999px;
+      font-size: 0.875rem;
+      font-weight: 600;
+    }
+    .status-ok {
+      background: #e6f4ea;
+      color: #137333;
+    }
+    .status-fail {
+      background: #fce8e6;
+      color: #c5221f;
+    }
+    .small {
+      font-size: 0.8rem;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+  <main class="container">
+    <section class="section">
+      <h1>HOAMX System Health</h1>
+      <p class="section-lead">
+        This page checks the public website, the contact API, and database connectivity from the API.
+      </p>
+
+      <table class="health-table">
+        <thead>
+          <tr>
+            <th>Component</th>
+            <th>Status</th>
+            <th>Details</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Website</td>
+            <td><span id="status-web" class="status-badge status-ok">OK</span></td>
+            <td class="small">If you can see this page, the website is serving static content.</td>
+          </tr>
+          <tr>
+            <td>Contact API</td>
+            <td><span id="status-api" class="status-badge">Checking…</span></td>
+            <td class="small" id="detail-api"></td>
+          </tr>
+          <tr>
+            <td>Database (via API)</td>
+            <td><span id="status-db" class="status-badge">Checking…</span></td>
+            <td class="small" id="detail-db"></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <script>
+    async function checkEndpoint(path, statusElId, detailElId) {
+      const statusEl = document.getElementById(statusElId);
+      const detailEl = document.getElementById(detailElId);
+
+      try {
+        const res = await fetch("https://hoamx-contact-api-414701915410.us-central1.run.app" + path, {
+          method: "GET",
+          headers: { "Accept": "application/json" },
+        });
+
+        if (!res.ok) {
+          statusEl.textContent = "Error";
+          statusEl.classList.add("status-fail");
+          detailEl.textContent = "HTTP " + res.status + " – " + (res.statusText || "Unknown");
+          return;
+        }
+
+        const data = await res.json().catch(() => ({}));
+
+        if (data.status === "ok") {
+          statusEl.textContent = "OK";
+          statusEl.classList.add("status-ok");
+          detailEl.textContent = "Responded successfully.";
+        } else {
+          statusEl.textContent = "Error";
+          statusEl.classList.add("status-fail");
+          detailEl.textContent = "Unexpected response from API.";
+        }
+      } catch (err) {
+        statusEl.textContent = "Error";
+        statusEl.classList.add("status-fail");
+        detailEl.textContent = "Network error: " + (err.message || "Unable to reach API.");
+        console.error("Health check error for", path, err);
+      }
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+      // Website is implicitly OK if this page loads.
+      // Check API health endpoints:
+      checkEndpoint("/health", "status-api", "detail-api");
+      checkEndpoint("/health/db", "status-db", "detail-db");
+    });
+  </script>
+</body>
+</html>
