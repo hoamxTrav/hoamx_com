@@ -269,7 +269,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
           if (!res.ok) {
             const error = await res.json().catch(() => ({}));
-            alert("Sorry, we couldn’t submit your message. " + (error.detail || ""));
+            //alert("Sorry, we couldn’t submit your message. " + (error.detail || ""));
+            alert("Sorry, we couldn’t submit your message.");
             return;
           }
           alert("Thanks – your message was sent to HOAMX.");
