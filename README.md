@@ -1,6 +1,6 @@
 # 🏡 HOAMX Website
 Modern HOA Management for Minnesota Communities  
-Static Website • Firebase Hosting • SEO Optimized
+Static Website • Firebase Hosting • SEO Optimized • API
 
 ## 🚀 Overview
 This repository contains the public-facing website for **HOAMX**, a modern HOA management platform built for Minnesota communities.  
