@@ -6,7 +6,7 @@
     <loc>https://hoamx.com/</loc>
     <priority>1.0</priority>
     <changefreq>weekly</changefreq>
-    <lastmod>2026-01-01</lastmod>
+    <lastmod>2026-01-04</lastmod>
   </url>
 
   <!-- Core Pages -->
@@ -42,15 +42,22 @@
     <loc>https://hoamx.com/blog.html</loc>
     <priority>0.8</priority>
     <changefreq>weekly</changefreq>
+    <lastmod>2026-01-04</lastmod>
+  </url>
+
+  <url>
+    <loc>https://hoamx.com/contact.html</loc>
+    <priority>0.8</priority>
+    <changefreq>yearly</changefreq>
     <lastmod>2026-01-01</lastmod>
   </url>
 
   <!-- Articles -->
   <url>
-    <loc>https://hoamx.com/better.html</loc>
+    <loc>https://hoamx.com/agentic.html</loc>
     <priority>0.75</priority>
     <changefreq>yearly</changefreq>
-    <lastmod>2025-12-29</lastmod>
+    <lastmod>2026-01-04</lastmod>
   </url>
 
   <url>
@@ -61,10 +68,10 @@
   </url>
 
   <url>
-    <loc>https://hoamx.com/contact.html</loc>
-    <priority>0.8</priority>
+    <loc>https://hoamx.com/better.html</loc>
+    <priority>0.75</priority>
     <changefreq>yearly</changefreq>
-    <lastmod>2026-01-01</lastmod>
+    <lastmod>2025-12-29</lastmod>
   </url>
 
 </urlset>
